@@ -1,0 +1,121 @@
+{
+  "pages": [
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/import/import",
+      "style": {
+        "navigationBarTitleText": "店铺入库",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/inStock/inStock",
+      "style": {
+        "navigationBarTitleText": "进货采购",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/outStock/outStock",
+      "style": {
+        "navigationBarTitleText": "销售",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/inventory/index",
+      "style": {
+        "navigationBarTitleText": "全部商品",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/user/index",
+      "style": {
+        "navigationBarTitleText": "我的信息",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/sellRecord/sellRecord",
+      "style": {
+        "navigationBarTitleText": "销售记录",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/shopInventory/shopInventory",
+      "style": {
+        "navigationBarTitleText": "店铺库存",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/transfer/transfer",
+      "style": {
+        "navigationBarTitleText": "调拨",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/my-transfer/my-transfer",
+      "style": {
+        "navigationBarTitleText": "店铺调拨入库",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/summary/summary",
+      "style": {
+        "navigationBarTitleText": "统计",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "globalStyle": {
+    "pageOrientation": "portrait",
+    "navigationBarTitleText": "Hello uniapp",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#007AFF",
+    "backgroundColor": "#F8F8F8",
+    "backgroundColorTop": "#F4F5F6",
+    "backgroundColorBottom": "#F4F5F6",
+    "mp-360": {
+      "navigationStyle": "custom"
+    },
+    "h5": {
+      "maxWidth": 1190,
+      "navigationBarTextStyle": "black",
+      "navigationBarBackgroundColor": "#F1F1F1"
+    }
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "pagePath": "pages/outStock/outStock",
+        "text": "销售",
+        "iconPath": "static/icons/sell.png"
+      },
+      {
+        "pagePath": "pages/sellRecord/sellRecord",
+        "text": "销售记录",
+        "iconPath": "static/icons/record.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "static/icons/my.png"
+      }
+    ]
+  }
+}

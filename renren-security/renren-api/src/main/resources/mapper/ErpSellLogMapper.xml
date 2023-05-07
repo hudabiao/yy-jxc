@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.renren.modules.erp.dao.ErpSellLogMapper">
+
+    <resultMap id="BaseResultMap" type="io.renren.modules.erp.domain.ErpSellLog">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="goodsId" column="goods_id" jdbcType="BIGINT"/>
+            <result property="sellTime" column="sell_time" jdbcType="TIMESTAMP"/>
+            <result property="paymentMethod" column="payment_method" jdbcType="TINYINT"/>
+            <result property="actualPaidPrice" column="actual_paid_price" jdbcType="DECIMAL"/>
+            <result property="sellCount" column="sell_count" jdbcType="SMALLINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,goods_id,sell_time,
+        payment_method,actual_paid_price,sell_count
+    </sql>
+
+    <select id="countSellData" resultType="io.renren.modules.erp.bo.SellSummaryBO">
+        SELECT
+            COUNT(*) as sellAmount,
+            sum(actual_paid_price) as totalIncome
+        FROM
+            erp_sell_log
+        WHERE
+            sell_time BETWEEN #{startTime} and #{endTime}
+          AND shop_id = #{shopId}
+    </select>
+</mapper>
